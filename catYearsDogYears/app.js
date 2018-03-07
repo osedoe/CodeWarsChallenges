@@ -1,27 +1,27 @@
-function humanYearsCatYearsDogYears(human) {
-    // Your code here!
-    let humanYears = 0,
-        catYears = 0,
-        dogYears = 0;
-    let arr = [humanYears, catYears, dogYears];
+let humanYearsCatYearsDogYears = (human) => {
+    let humanYears,
+        catYears,
+        dogYears;
 
-    for (let i=0; i<=humanYears; i++) {
-      humanYears++;
-      if (humanYears === 1) {
-        catYears += 15;
-        dogYears += 15;
-      } else if (humanYears === 2) {
-        catYears += 9;
-        dogYears += 9;
-      } else if (humanYears > 2) {
-        catYears += 4;
-        dogYears += 5;
-      }
+    if (human === 1) {
+      humanYears = human;
+      catYears = 15;
+      dogYears = 15;
+    } else if (human === 2) {
+      humanYears = human;
+      catYears = 15+9;
+      dogYears = 15+9;
+    } else if (human > 2) {
+      humanYears = human;
+      catYears = 24 + ( 4 * ( human - 2 ));
+      dogYears = 24 + ( 5 * ( human - 2 ));
     }
+    let arr = [humanYears, catYears, dogYears];
     console.log(arr);
     return arr;
-}
+};
 
+// Solved
 
 humanYearsCatYearsDogYears(1); // [1,15,15]
   

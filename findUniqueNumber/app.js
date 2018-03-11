@@ -12,7 +12,6 @@ let findUniq = (arr) => {
     return arr[0];
 };
 
-
 findUniq([ 0, 1, 0 ]);
 findUniq([ 1, 1, 1, 2, 1, 1 ]);
 findUniq([ 3, 10, 3, 3, 3 ]);

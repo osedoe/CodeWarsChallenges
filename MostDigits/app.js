@@ -15,8 +15,7 @@ const findLongest = array => {
             firstLongest = str;
         }
     }
-    console.log(firstLongest);
-    return firstLongest;
+    return parseInt(firstLongest);
 };
 
 findLongest([1, 10, 100]); // 100

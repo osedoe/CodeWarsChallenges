@@ -24,7 +24,7 @@ For conjugating in Spanish, we need to remove the infinitive suffix (ar, er or i
 Personal suffixes
 The personal suffixes changes depending of the Infinitive suffix.
 
-If the infinitive suffix is AR the personal suffixes are:
+### If the infinitive suffix is AR the personal suffixes are
 
 * first person singular (Yo / I): -o
 * second person singular (Tú / You): -as
@@ -33,7 +33,7 @@ If the infinitive suffix is AR the personal suffixes are:
 * second person plural (Vosotros / You): -áis
 * third person plural (Ellos / They): -an
 
-If the infinitive suffix is ER:
+### If the infinitive suffix is ER
 
 * first person singular (Yo / I): -o
 * second person singular (Tú / You): -es
@@ -42,7 +42,7 @@ If the infinitive suffix is ER:
 * second person plural (Vosotros / You): -éis
 * third person plural (Ellos / They): -en
 
-If the infinitive suffix is IR:
+### If the infinitive suffix is IR
 
 first person singular (Yo / I): -o
 second person singular (Tú / You): -es

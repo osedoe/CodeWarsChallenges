@@ -1,4 +1,4 @@
-const arithmetic = (a, b, operator) => {
+module.exports = arithmetic = (a, b, operator) => {
     let answer;
     switch (operator) {
         case "add":

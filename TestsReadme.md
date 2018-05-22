@@ -1,131 +1,85 @@
 # Basic Setup
 
+<http://www.chaijs.com/>
+We are going to be using Mocha and Chao for the Tests.
+So, we'll have to require('chai');
+From there, we can choose to use assert, expect or should.
+As for now, I will be using mostly assert since it's the only one I'm familiar with.
+
 ```javascript
-describe("Example Tests", function() {
-  it("Example Test Case", function() {
-    Test.assertEquals(add(1, 1), 2, "optional message");
-  });
+describe('Title', function() {
+    describe('general description', function() {
+        it('specific test description', function () {
+            // Code
+        });
+    });
 });
 ```
 
-## Assertions
+## Assert
 
-TODO Improve descriptions while keeping them simple.
-
-```javascript
-Test.assertEquals(actual, expected[, msg])
-```
-
-Checks that the actual value equals (===) the expected value.
+The assert style is exposed through assert interface. This provides the classic assert-dot notation, similar to that packaged with node.js. This assert module, however, provides several additional tests and is browser compatible.
 
 ```javascript
-Test.assertNotEquals(actual, unexpected[, msg])
+var assert = require('chai').assert
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+assert.typeOf(foo, 'string'); // without optional message
+assert.typeOf(foo, 'string', 'foo is a string'); // with optional message
+assert.equal(foo, 'bar', 'foo equal `bar`');
+assert.lengthOf(foo, 3, 'foo`s value has a length of 3');
+assert.lengthOf(beverages.tea, 3, 'beverages has 3 types of tea');
 ```
 
-Checks that the actual value does not equal (!==) the unexpected value.
+In all cases, the assert style allows you to include an optional message as the last parameter in the assert statement. These will be included in the error messages should your assertion not pass.
+
+## BDD
+
+The BDD style comes in two flavors: expect and should. Both use the same chainable language to construct assertions, but they differ in the way an assertion is initially constructed. In the case of should, there are also some caveats and additional tools to overcome the caveats.
+
+### Expect
+
+The BDD style is exposed through expect or should interfaces. In both scenarios, you chain together natural language assertions.
 
 ```javascript
-Test.assertSimilar(actual, expected[, msg])
+var expect = require('chai').expect
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+expect(foo).to.be.a('string');
+expect(foo).to.equal('bar');
+expect(foo).to.have.lengthOf(3);
+expect(beverages).to.have.property('tea').with.lengthOf(3);
 ```
 
-Checks that the actual value equals (===) the expected value.
-
-Test.inspect is used to wrap the values being tested, allowing for similar values to be considered the same.
+Expect also allows you to include arbitrary messages to prepend to any failed assertions that might occur.
 
 ```javascript
-Test.assertNotSimilar(actual, unexpected[, msg])
+var answer = 43;
+
+// AssertionError: expected 43 to equal 42.
+expect(answer).to.equal(42);
+
+// AssertionError: topic [answer]: expected 43 to equal 42.
+expect(answer, 'topic [answer]').to.equal(42);
 ```
 
-Checks that the actual value does not equal (!==) the unexpected value.
+This comes in handy when being used with non-descript topics such as booleans or numbers.
 
-Test.inspect is used to wrap the values being tested, allowing for similar values to be considered the same.
+### Should
 
-```javascript
-Test.assertDeepEquals(actual, expected[, msg])
+The should style allows for the same chainable assertions as the expect interface, however it extends each object with a should property to start your chain. This style has some issues when used with Internet Explorer, so be aware of browser compatibility.
+
+```javasscript
+var should = require('chai').should() //actually call the function
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+foo.should.be.a('string');
+foo.should.equal('bar');
+foo.should.have.lengthOf(3);
+beverages.should.have.property('tea').with.lengthOf(3);
 ```
 
-Checks that the actual value equals the expected value by performing deep comparison.
-
-Unlike Test.assertSimilar, values are not turned into strings.
-
-```javascript
-Test.assertNotDeepEquals(actual, unexpected[, msg])
-```
-
-Checks that the actual value does not equal the unexpected value by performing deep comparison.
-
-Unlike Test.assertNotSimilar, values are not turned into strings.
-
-```javascript
-Test.assertApproxEquals(actual, expected[, msg])
-```
-
-Compares two floating point values and checks whether they are approximately equal to each other.
-
-```javascript
-Test.assertNotApproxEquals(actual, expected[, msg])
-```
-
-Compares two floating point values and checks whether they are sufficiently different from each other.
-
-```javascript
-Test.assertContains(actual, expected[, msg])
-```
-
-Checks that the actual value contains the expected element.
-
-```javascript
-Test.assertNotContains(actual, unexpected[, msg])
-```
-
-Checks that the actual value does not contain the unexpected element.
-
-```javascript
-Test.expectError([msg, ]fn)
-```
-
-Checks that fn throws.
-
-```javascript
-Test.expectNoError([msg, ]fn)
-```
-
-Checks that fn does not throw.
-
-```javascript
-Test.expect(passed[, msg])
-```
-
-Core assertion method testing if passed is truthy.
-
-## Utilities
-
-```javascript
-Test.inspect(object)
-```
-
-Returns a string representation of the object.
-
-```javascript
-Test.randomize(array)
-```
-
-Returns a shuffled array.
-
-```javascript
-Test.randomNumber()
-```
-
-Returns a random integer.
-
-```javascript
-Test.randomToken()
-```
-
-Returns a random string of characters.
-
-```javascript
-Test.sample(array)
-```
-
-Returns a single, randomly chosen item from an array.
+[Continue...]

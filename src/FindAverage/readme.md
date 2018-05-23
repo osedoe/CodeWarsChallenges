@@ -1,1 +1,3 @@
-Write function avg which calculates average of numbers in given list.
+# Find Average
+
+Write a function 'average' that calculates the average of numbers in a given array.

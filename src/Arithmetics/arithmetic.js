@@ -19,8 +19,3 @@ module.exports = arithmetic = (a, b, operator) => {
     }
     return answer;
 };
-
-arithmetic(8,2,"subtract");
-
-
-

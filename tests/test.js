@@ -14,8 +14,12 @@ const hycydy2 = require("../src/CatYearsDogYears/hycydy2");
 const disemvowel = require("../src/DisemvowelTrolls/disemvowel");
 const findAverage = require("../src/FindAverage/findaverage");
 const findunique = require("../src/FindUniqueNumber/findunique");
-const mergeTwoArrays = require ("../src/MergeTwoArrays/mergearrs.js");
+const mergeTwoArrays = require("../src/MergeTwoArrays/mergearrs.js");
 const mostDigits = require("../src/MostDigits/mostdigits");
+const palindrome = require("../src/Palindrome/palindrome");
+const peopleInTheBus = require("../src/PeopleInTheBus/bus");
+const removeExclamationMarks = require("../src/RemoveExclamationMarks/removeExclamation");
+const scrollingText = require("../src/ScrollingText/scroll");
 
 // Test Cases
 describe("Adjacent Elements Product", () => {
@@ -103,17 +107,17 @@ describe("Disemvowel Trolls", () => {
 
 describe("Find Average Number", () => {
     it("should return the average number, 1 in this case", () => {
-        assert.equal(find_average([1,1,1]), 1);
+        assert.equal(find_average([1, 1, 1]), 1);
     });
     it("should return the average number, 2 in this case", () => {
-        assert.equal(find_average([1,2,3]), 2);
+        assert.equal(find_average([1, 2, 3]), 2);
     });
 });
 
 describe("Find Unique Number", () => {
     describe("should find the number in the given array that is not repeated", () => {
         it("should return 1", () => {
-            assert.equal(findunique([0,1,0]), 1);
+            assert.equal(findunique([0, 1, 0]), 1);
         });
         it("should return 2", () => {
             assert.equal(findunique([1, 1, 1, 2, 1, 1]), 2);
@@ -133,19 +137,21 @@ describe("Merge Two Arrays", () => {
         // So, we'll use deepEqual for comparing the elements of an array or an object
         assert.deepEqual(mergeTwoArrays(arr1, arr2), result);
         // We're introducing typeOf to check the data-type as well
-        assert.typeOf(result, "array");
+        assert.typeOf(mergeTwoArrays(arr1, arr2), "array");
         assert.typeOf(mergeTwoArrays(arr1, arr2), "array");
     });
     it("should return the merge of two arrays, removing duplicates and sorting it in ascending order", () => {
         const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const arr1 = [1, 3, 5, 7, 9];
         const arr2 = [10, 8, 6, 4, 2];
+        assert.typeOf(mergeTwoArrays(arr1, arr2), "array");
         assert.deepEqual(mergeTwoArrays(arr1, arr2), result);
     });
     it("should return the merge of two arrays, removing duplicates and sorting it in ascending order", () => {
         let result = [1, 2, 3, 4, 5, 7, 9, 10, 11, 12];
         const arr1 = [1, 3, 5, 7, 9, 11, 12];
         const arr2 = [1, 2, 3, 4, 5, 10, 12];
+        assert.typeOf(mergeTwoArrays(arr1, arr2), "array");
         assert.deepEqual(mergeTwoArrays(arr1, arr2), result);
     });
 });
@@ -176,6 +182,58 @@ describe("Most Digits", () => {
             const result = 900;
             assert.equal(findLongest2([8, 900, 900]), result);
         });
+    });
+});
+
+describe("Check Palindrome", () => {
+    it("should return false", () => {
+        assert.equal(checkPalindrome("abac"), false);
+    });
+    it("should return true", () => {
+        assert.equal(checkPalindrome("aba"), true);
+    });
+    it("should return true", () => {
+        assert.equal(checkPalindrome("abbcbba"), true);
+    });
+    it("should return false", () => {
+        assert.equal(checkPalindrome("acddc"), false);
+    });
+});
+
+describe("People in the Bus", () => {
+    describe("given an array of tuples, where each tuple represents a stop where the first number is the amount of people that gets in the bus and the second the ones who leave, find how many people are left in the bus after it has gone through all the stops", () => {
+        it("should return 5", () => {
+            assert.equal(peopleInTheBus([ [10,0], [3,5], [5,8] ]), 5);
+        });
+        it("should return 17", () => {
+            assert.equal(peopleInTheBus([ [3,0], [9,1], [4,10], [12,2], [6,1], [7,10] ]), 17);
+        });
+        it("should return 21", () => {
+            assert.equal(peopleInTheBus([ [3,0], [9,1], [4,8], [12,2], [6,1], [7,8] ]), 21);
+        });
+    });
+});
+
+describe("Remove Exclamation Marks", () => {
+    it("should remove all the occurences of '!'", () => {
+        assert.equal(removeExclamationMarks("Hello World!"), "Hello World");
+    });
+    it("should remove all the occurences of '!'", () => {
+        assert.equal(removeExclamationMarks("Hola Claudia...! Que tal estas!?"), "Hola Claudia... Que tal estas?");
+    });
+});
+
+describe("Scrolling Text", () => {
+    it("should iterate over the string", () => {
+        const result = ['CODEWARS',
+                        'ODEWARSC',
+                        'DEWARSCO',
+                        'EWARSCOD',
+                        'WARSCODE',
+                        'ARSCODEW',
+                        'RSCODEWA',
+                        'SCODEWAR'];
+        assert.deepEqual(scrollingText("CODEWARS"), result);
     });
 });
 

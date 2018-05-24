@@ -1,11 +1,12 @@
 
-// const findLongest = a => Math.max(...a);
+module.exports = findLongest2 = a => Math.max(...a);
 //
 // The above solution won't pass the second condition of the question
 // since it finds the biggest number (value) in an array,
 // not the first one with the most digits.
+// UPDATE: It seems to pass... No entiendo nada.
 
-const findLongest = array => {
+module.exports = findLongest = array => {
     let digitLength = 0;
     let firstLongest;
     for (let i = 0; i < array.length; i++) {
@@ -17,7 +18,3 @@ const findLongest = array => {
     }
     return parseInt(firstLongest);
 };
-
-findLongest([1, 10, 100]); // 100
-findLongest([9000, 8, 800]); // 9000
-findLongest([8, 900, 500]); // 900

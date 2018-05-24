@@ -19,11 +19,3 @@ module.exports = hycydy = (human) => {
     console.log(arr.constructor);
     return arr;
 };
-
-// Solved
-
-hycydy(1); // [1,15,15]
-
-hycydy(2); // [2,24,24]
-
-hycydy(10); // [10,56,64]

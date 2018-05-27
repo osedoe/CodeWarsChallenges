@@ -20,6 +20,7 @@ const palindrome = require("../src/Palindrome/palindrome");
 const peopleInTheBus = require("../src/PeopleInTheBus/bus");
 const removeExclamationMarks = require("../src/RemoveExclamationMarks/removeExclamation");
 const scrollingText = require("../src/ScrollingText/scroll");
+const sortByLength = require("../src/SortArrayByStringLength/sortarrays");
 
 // Test Cases
 describe("Adjacent Elements Product", () => {
@@ -237,3 +238,21 @@ describe("Scrolling Text", () => {
     });
 });
 
+describe("Sort Arrays by String Length", () => {
+    it("should return the same array passed as a parameter but ordered from shortest to longest", () => {
+        const result = ["Eyes", "Glasses", "Monocles", "Telescopes"];
+        assert.deepEqual(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"]), result);
+    });
+    it("should return the same array passed as a parameter but ordered from shortest to longest", () => {
+        const result = ["I", "To", "Beg", "Life"];
+        assert.deepEqual(sortByLength(["Beg", "Life", "I", "To"]), result);
+    });
+    it("should return the same array passed as a parameter but ordered from shortest to longest", () => {
+        const result = ["", "Pizza", "Brains", "Moderately"];
+        assert.deepEqual(sortByLength(["", "Moderately", "Brains", "Pizza"]), result);
+    });
+    it("should return the same array passed as a parameter but ordered from shortest to longest", () => {
+        const result = ["Short", "Longer", "Longest"];
+        assert.deepEqual(sortByLength(["Longer", "Longest", "Short"]), result);
+    });
+});

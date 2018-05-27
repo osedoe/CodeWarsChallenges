@@ -21,6 +21,7 @@ const peopleInTheBus = require("../src/PeopleInTheBus/bus");
 const removeExclamationMarks = require("../src/RemoveExclamationMarks/removeExclamation");
 const scrollingText = require("../src/ScrollingText/scroll");
 const sortByLength = require("../src/SortArrayByStringLength/sortarrays");
+const spanishConjugator = require("../src/SpanishConjugator/spanishconjugator2");
 
 // Test Cases
 describe("Adjacent Elements Product", () => {
@@ -254,5 +255,49 @@ describe("Sort Arrays by String Length", () => {
     it("should return the same array passed as a parameter but ordered from shortest to longest", () => {
         const result = ["Short", "Longer", "Longest"];
         assert.deepEqual(sortByLength(["Longer", "Longest", "Short"]), result);
+    });
+});
+
+describe("Spanish Conjugator", () => {
+    describe("should return an object with a spanish verb conjugated in its present indicative form. The object will have a key named after the invinitive with a value of an array with the actual verb conjugated", () => {
+        it("should return the verb Caminar", () => {
+            const result = {
+                "caminar": [
+                    "camino",
+                    "caminas",
+                    "camina",
+                    "caminamos",
+                    "camináis",
+                    "caminan"
+                ]
+            };
+            assert.deepEqual(spanishConjugator("caminar"), result);
+        });
+        it("should return the verb Comer", () => {
+            const result = {
+                "comer": [
+                    "como",
+                    "comes",
+                    "come",
+                    "comemos",
+                    "coméis",
+                    "comen"
+                ]
+            };
+            assert.deepEqual(spanishConjugator("comer"), result);
+        });
+        it("should return the verb Vivir", () => {
+            const result = {
+                "vivir": [
+                    "vivo",
+                    "vives",
+                    "vive",
+                    "vivimos",
+                    "vivís",
+                    "viven"
+                ]
+            };
+            assert.deepEqual(spanishConjugator("vivir"), result);
+        });
     });
 });

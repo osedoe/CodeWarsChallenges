@@ -22,6 +22,7 @@ const removeExclamationMarks = require("../src/RemoveExclamationMarks/removeExcl
 const scrollingText = require("../src/ScrollingText/scroll");
 const sortByLength = require("../src/SortArrayByStringLength/sortarrays");
 const spanishConjugator = require("../src/SpanishConjugator/spanishconjugator2");
+const squareSum = require("../src/SquareSum/squaresum");
 
 // Test Cases
 describe("Adjacent Elements Product", () => {
@@ -298,6 +299,17 @@ describe("Spanish Conjugator", () => {
                 ]
             };
             assert.deepEqual(spanishConjugator("vivir"), result);
+        });
+    });
+});
+
+describe("Square Sum", () => {
+    describe("Given an array, calculate the square of each element and sum the result", () => {
+        it("should return 9", () => {
+            assert.equal(squareSum([1, 2, 2]), 9);
+        });
+        it("should return 22", () => {
+            assert.equal(squareSum([2, 3, 3]), 22);
         });
     });
 });

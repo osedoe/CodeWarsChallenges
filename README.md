@@ -1,28 +1,93 @@
 # Collection of Code Wars Challenges
 
-All challenges should be mainly solved using JavaScript (ES6)
-Some of them may be tried in Java as well.
+Key points:
 
-- STRUCTURE:
+- All challenges are solved using JavaScript (ES6).
+- The readme.md inside each directory should display the problem.
+- The file will have the challenge's name *.js.
+- A second file named *2.js can be included with alternative solutions.
+- Each challenge will have a module.export so it can be tested in the tests/test.js
 
-The readme.txt inside each directory should display the problem.
-The file app.js will have the code with the answer and a simple call with some basic parameters.
-A second file named app2.js can be included with alternative solutions.
+## Basic Test Setup
 
-- NOTE 1:
-
-Since this directory wasn't intended to be uploaded on GitHub, and just as a way to code more comfortably the problems. There's a a few challenges that lack of the said readme with the problem, although the name of the function should be clear enough to understand what is asking.
-
-- NOTE 2:
-
-Tests cases are included at the end of the file, in the following form:
+<http://www.chaijs.com/>
+We are going to be using Mocha and Chao for the Tests.
+So, we'll have to require('chai');
+From there, we can choose to use assert, expect or should.
+As for now, I will be using mostly assert since it's the only one I'm familiar with.
 
 ```javascript
-describe("Example Tests", function() {
-    it("Example Test Case", function() {
-      Test.assertEquals(add(1, 1), 2, "optional message");
+describe('Title', function() {
+    describe('general description', function() {
+        it('specific test description', function () {
+            // Code
+        });
     });
 });
 ```
 
-For more information about test, look into TestsReadme.md
+## Assert
+
+The assert style is exposed through assert interface. This provides the classic assert-dot notation, similar to that packaged with node.js. This assert module, however, provides several additional tests and is browser compatible.
+
+```javascript
+var assert = require('chai').assert
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+assert.typeOf(foo, 'string'); // without optional message
+assert.typeOf(foo, 'string', 'foo is a string'); // with optional message
+assert.equal(foo, 'bar', 'foo equal `bar`');
+assert.lengthOf(foo, 3, 'foo`s value has a length of 3');
+assert.lengthOf(beverages.tea, 3, 'beverages has 3 types of tea');
+```
+
+In all cases, the assert style allows you to include an optional message as the last parameter in the assert statement. These will be included in the error messages should your assertion not pass.
+
+## BDD
+
+The BDD style comes in two flavors: expect and should. Both use the same chainable language to construct assertions, but they differ in the way an assertion is initially constructed. In the case of should, there are also some caveats and additional tools to overcome the caveats.
+
+### Expect
+
+The BDD style is exposed through expect or should interfaces. In both scenarios, you chain together natural language assertions.
+
+```javascript
+var expect = require('chai').expect
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+expect(foo).to.be.a('string');
+expect(foo).to.equal('bar');
+expect(foo).to.have.lengthOf(3);
+expect(beverages).to.have.property('tea').with.lengthOf(3);
+```
+
+Expect also allows you to include arbitrary messages to prepend to any failed assertions that might occur.
+
+```javascript
+var answer = 43;
+
+// AssertionError: expected 43 to equal 42.
+expect(answer).to.equal(42);
+
+// AssertionError: topic [answer]: expected 43 to equal 42.
+expect(answer, 'topic [answer]').to.equal(42);
+```
+
+This comes in handy when being used with non-descript topics such as booleans or numbers.
+
+### Should
+
+The should style allows for the same chainable assertions as the expect interface, however it extends each object with a should property to start your chain. This style has some issues when used with Internet Explorer, so be aware of browser compatibility.
+
+```javascript
+const should = require('chai').should() //actually call the function
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+foo.should.be.a('string');
+foo.should.equal('bar');
+foo.should.have.lengthOf(3);
+beverages.should.have.property('tea').with.lengthOf(3);
+```

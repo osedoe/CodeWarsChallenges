@@ -1,3 +1,6 @@
 module.exports = disemvowel = str => {
-    return 'Ths wbst s fr lsrs LL!';
-  };
+	const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+	return str.split("")
+			  .filter( el => !vowels.includes(el))
+			  .join("");
+};

@@ -23,6 +23,8 @@ const scrollingText = require("../src/ScrollingText/scroll");
 const sortByLength = require("../src/SortArrayByStringLength/sortarrays");
 const spanishConjugator = require("../src/SpanishConjugator/spanishconjugator2");
 const squareSum = require("../src/SquareSum/squaresum");
+const sumOfTwoLowest = require("../src/SumOfTwoLowest/sumoftwolowest");
+const uniqueNumbers = require("../src/UniqueNumbers/uniquenumbers");
 
 // Test Cases
 describe("Adjacent Elements Product", () => {
@@ -102,9 +104,13 @@ describe("Human Years, Cat Years and Dog Years", () => {
 });
 
 describe("Disemvowel Trolls", () => {
-    it("should return the string without vowels", () => {
+    it("should return the string without vowels 'Ths wbst s fr lsrs LL!' ", () => {
         const result = "Ths wbst s fr lsrs LL!";
         assert.equal(disemvowel("This website is for losers LOL!"), result);
+    });
+    it("should return 'Vv l vd lc!", () => {
+        const result = "Vv l vd lc!";
+        assert.equal(disemvowel("Viva la vida loca!"), result);
     });
 });
 
@@ -304,12 +310,34 @@ describe("Spanish Conjugator", () => {
 });
 
 describe("Square Sum", () => {
-    describe("Given an array, calculate the square of each element and sum the result", () => {
+    describe("given an array, calculate the square of each element and sum the result", () => {
         it("should return 9", () => {
             assert.equal(squareSum([1, 2, 2]), 9);
         });
         it("should return 22", () => {
             assert.equal(squareSum([2, 3, 3]), 22);
+        });
+    });
+});
+
+describe("Sum of the Two Lowest", ()=> {
+    describe("should return the sum of the two lowest numbers in a given array", () => {
+        it("should return 7", () => {
+            assert.equal(sumOfTwoLowest([19, 5, 42, 2, 77]), 7);
+        });
+        it("should return 13", () => {
+            assert.equal(sumOfTwoLowest([5, 8, 12, 19, 22]), 13);
+        });
+    });
+});
+
+describe("Unique Numbers", () => {
+    describe("should remove the duplicates in an array", () => {
+        it("should return [1,2]", () => {
+            assert.deepEqual(uniqueNumbers([1,1,2,2]), [1,2]);
+        });
+        it("should return [1,2,3]", () => {
+            assert.deepEqual(uniqueNumbers([1,2,2,3,3,3]), [1,2,3]);
         });
     });
 });

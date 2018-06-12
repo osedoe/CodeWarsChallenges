@@ -6,14 +6,15 @@ const expect = require("chai").expect;
 // For more info, read the Test.Readme.md
 
 // We"re gonna import each challenge now
-const adjacentelementsproduct = require("../src/AdjacentElementsProduct/adjacentproduct");
+const adjacentElementsProduct = require("../src/AdjacentElementsProduct/adjacentproduct");
 const arithmetic = require("../src/Arithmetics/arithmetic");
 const bump = require("../src/BumpsInTheRoad/bumpsintheroad");
 const hycydy = require("../src/CatYearsDogYears/hycydy");
 const hycydy2 = require("../src/CatYearsDogYears/hycydy2");
 const disemvowel = require("../src/DisemvowelTrolls/disemvowel");
 const findAverage = require("../src/FindAverage/findaverage");
-const findunique = require("../src/FindUniqueNumber/findunique");
+const high = require('../src/HighestScoringWord/highestscoringword');
+const findUnique = require("../src/FindUniqueNumber/findunique");
 const mergeTwoArrays = require("../src/MergeTwoArrays/mergearrs.js");
 const mostDigits = require("../src/MostDigits/mostdigits");
 const palindrome = require("../src/Palindrome/palindrome");
@@ -30,7 +31,7 @@ const uniqueNumbers = require("../src/UniqueNumbers/uniquenumbers");
 describe("Adjacent Elements Product", () => {
     it("should find the pair of adjacent elements that has the largest product and return it", () => {
         const result = 21;
-        assert.equal(adjacentelementsproduct([3, 6, -2, -5, 7, 3]), result);
+        assert.equal(adjacentElementsProduct([3, 6, -2, -5, 7, 3]), result);
     });
 });
 
@@ -126,13 +127,27 @@ describe("Find Average Number", () => {
 describe("Find Unique Number", () => {
     describe("should find the number in the given array that is not repeated", () => {
         it("should return 1", () => {
-            assert.equal(findunique([0, 1, 0]), 1);
+            assert.equal(findUnique([0, 1, 0]), 1);
         });
         it("should return 2", () => {
-            assert.equal(findunique([1, 1, 1, 2, 1, 1]), 2);
+            assert.equal(findUnique([1, 1, 1, 2, 1, 1]), 2);
         });
         it("should return 10", () => {
-            assert.equal(findunique([3, 10, 3, 3, 3]), 10);
+            assert.equal(findUnique([3, 10, 3, 3, 3]), 10);
+        });
+    });
+});
+
+describe("Highest Scoring Word", () => {
+    describe("should return the word with the highest score, or the first one if there's a match", () => {
+        it("should return 'taxi'", () => {
+            assert.equal(high("man i need a taxi up to ubud"), "taxi");
+        });
+        it("should return 'volcano'", () => {
+            assert.equal(high("what time are we climbing up the volcano"), "volcano");
+        });
+        it("should return 'semynak'", () => {
+            assert.equal(high("take me to semynak"), "semynak");
         });
     });
 });

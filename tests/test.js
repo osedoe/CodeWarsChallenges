@@ -1,9 +1,9 @@
-// Ussually, [ const assert = require("assert"); ]
+// Usually, [ const assert = require("assert"); ]
 // But we"ll use Mocha with Chai, so:
 const assert = require("chai").assert;
 const expect = require("chai").expect;
 // we can use SHOULD and EXPECT from Chai, as well
-// For more info, read the Test.Readme.md
+// For more info, read the TestReadme.md
 
 // We"re gonna import each challenge now
 const adjacentElementsProduct = require("../src/AdjacentElementsProduct/adjacentproduct");

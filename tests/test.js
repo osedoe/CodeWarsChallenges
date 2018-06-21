@@ -1,13 +1,13 @@
 // Usually, [ const assert = require("assert"); ]
 // But we"ll use Mocha with Chai, so:
-const assert = require("chai").assert;
-const expect = require("chai").expect;
+// const assert = require("chai").assert;
+// const expect = require("chai").expect;
 // we can use SHOULD and EXPECT from Chai, as well
 // For more info, read the TestReadme.md
 
 // We"re gonna import each challenge now
-const adjacentElementsProduct = require("../src/AdjacentElementsProduct/adjacentproduct");
-const arithmetic = require("../src/Arithmetics/arithmetic");
+// const adjacentElementsProduct = require("../src/AdjacentElementsProduct/adjacentproduct");
+// const arithmetic = require("../src/Arithmetics/arithmetic");
 const bump = require("../src/BumpsInTheRoad/bumpsintheroad");
 const hycydy = require("../src/CatYearsDogYears/hycydy");
 const hycydy2 = require("../src/CatYearsDogYears/hycydy2");
@@ -28,12 +28,6 @@ const sumOfTwoLowest = require("../src/SumOfTwoLowest/sumoftwolowest");
 const uniqueNumbers = require("../src/UniqueNumbers/uniquenumbers");
 
 // Test Cases
-describe("Adjacent Elements Product", () => {
-    it("should find the pair of adjacent elements that has the largest product and return it", () => {
-        const result = 21;
-        assert.equal(adjacentElementsProduct([3, 6, -2, -5, 7, 3]), result);
-    });
-});
 
 describe("Arithmetics", () => {
     describe("should return the result of the operation with two numbers using the operator indicated", () => {

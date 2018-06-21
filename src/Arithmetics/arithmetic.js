@@ -1,4 +1,4 @@
-module.exports = arithmetic = (a, b, operator) => {
+const arithmetic = (a, b, operator) => {
     let answer;
     switch (operator) {
         case "add":
@@ -19,3 +19,6 @@ module.exports = arithmetic = (a, b, operator) => {
     }
     return answer;
 };
+
+// export default arithmetic;
+module.exports = arithmetic;

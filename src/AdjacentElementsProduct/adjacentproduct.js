@@ -3,4 +3,5 @@ const adjacentElementsProduct = arrInput => (Math.max(...arrInput
         .map((n, i) => n * arrInput[i +1]))
     );
 
+// export default adjacentElementsProduct;
 module.exports = adjacentElementsProduct;

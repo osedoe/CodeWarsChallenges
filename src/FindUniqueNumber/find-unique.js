@@ -1,4 +1,4 @@
-module.exports = findUniq = arr => {
+const findUnique = arr => {
     const lng = arr.length;
     let sortedArr = arr.sort( (a,b) => a - b);
     if (sortedArr[0] === sortedArr[lng-2]) {
@@ -9,6 +9,8 @@ module.exports = findUniq = arr => {
         return sortedArr[0];
     }
 };
+
+module.exports = findUnique;
 
 // Better solution found in Code Wars after solving it.
 /*

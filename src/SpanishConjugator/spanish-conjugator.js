@@ -1,4 +1,4 @@
-module.exports = conjugate = verb => {
+const conjugate = verb => {
     const obj = {};
     obj[verb] = [];
     const root = verb.substring(0,verb.length-2);
@@ -81,6 +81,8 @@ module.exports = conjugate = verb => {
     return obj;
 };
 
+module.exports = conjugate;
+
 // function conjugate(verb){
 //     const dic = { 'ar':['o','as','a','amos', 'áis','an'],
 //                   'er':['o','es','e','emos', 'éis','en'],
@@ -88,3 +90,4 @@ module.exports = conjugate = verb => {
   
 //     return { [verb]: dic[verb.slice(-2)].map(e=> verb.slice(0,-2)+e) };
 //   }
+

@@ -1,4 +1,4 @@
-module.exports = mergeTwoArrays = (arr1, arr2) => {
+const mergeTwoArrays = (arr1, arr2) => {
     let newArr = arr1.concat(arr2);
     let finalArr = [];
     newArr.forEach( element => {
@@ -7,3 +7,5 @@ module.exports = mergeTwoArrays = (arr1, arr2) => {
     finalArr.sort((a,b)=>a-b);    
     return finalArr;
 };
+
+module.exports = mergeTwoArrays;

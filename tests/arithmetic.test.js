@@ -1,5 +1,4 @@
-// import arithmetic from './../src/Arithmetics/arithmetic';
-const arithmetic = require('./..src/Arithmetics/arithmetic');
+const arithmetic = require('./../src/Arithmetics/arithmetic');
 
 describe("Arithmetics", () => {
     describe("should return the result of the operation with two numbers using the operator indicated", () => {

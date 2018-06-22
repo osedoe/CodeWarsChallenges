@@ -20,5 +20,4 @@ const arithmetic = (a, b, operator) => {
     return answer;
 };
 
-// export default arithmetic;
 module.exports = arithmetic;

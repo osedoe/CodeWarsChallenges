@@ -5,4 +5,4 @@ const bump = (x, bumpCount = 0) => {
     return (bumpCount <= 15) ? "Woohoo!" : "Car Dead";
 };
 
-module.exports = bumps;
+module.exports = bump;

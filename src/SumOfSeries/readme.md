@@ -25,12 +25,3 @@ SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"
 ```
 
 NOTE: In PHP the function is called series_sum().
-
-Tests:
-
-```javascript
-assert.equals(SeriesSum(1), "1.00");
-assert.equals(SeriesSum(2), "1.25");
-assert.equals(SeriesSum(3), "1.39");
-assert.equals(SeriesSum(4), "1.49");
-```

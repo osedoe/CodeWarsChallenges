@@ -1,4 +1,4 @@
-module.exports = scrollingText = text => {
+const scrollingText = text => {
     text.toUpperCase();
     let answer = [];
     let arr = text.split("");
@@ -13,3 +13,5 @@ module.exports = scrollingText = text => {
     answer.pop();
     return answer;
 };
+
+module.exports = scrollingText;

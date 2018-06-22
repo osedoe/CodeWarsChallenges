@@ -1,5 +1,4 @@
 const tvRemote = word => {
-    return 1;
+	// Some code
+	return number;
 };
-
-export default tvRemote;

@@ -1,3 +1,4 @@
 const breakCamelCase = str => {
-    // solution
+	// solution
+	return strResult;
 };

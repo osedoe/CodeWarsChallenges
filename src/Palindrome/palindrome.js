@@ -1,6 +1,6 @@
-module.exports = checkPalindrome = str => {
+const checkPalindrome = str => {
     let rev = str.split("").reverse().join("");
     return (rev == str) ? true : false;
 };
 
-checkPalindrome("abac");
+module.exports = checkPalindrome;

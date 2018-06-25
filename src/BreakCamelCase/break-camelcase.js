@@ -1,4 +1,9 @@
 const breakCamelCase = str => {
-	// solution
-	return strResult;
+	const subs = match => ' ' + match;
+	const result = str.replace(/[A-Z]/g, subs);
+	return result;
 };
+
+breakCamelCase("holaQueTal");
+
+module.exports = breakCamelCase;

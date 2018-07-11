@@ -1,0 +1,3 @@
+function averages (scores) {
+    // code
+}

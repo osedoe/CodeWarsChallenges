@@ -8,13 +8,10 @@ const insideOut = str => {
 		const half = word.length / 2;
 		// Find out if the letter count is even or odd
 		// If even:
-		if (isEven(word) === true) {
-			let letters = word.split("");
-			let firstHalf = letters.splice(0, half);
-			let firstResult = firstHalf.reverse();
-			let secondResult = letters.reverse();
-			const reverseWord = firstResult.concat(secondResult);
-
+		if (isEven(word)) {
+			return inOutEven(word, half); // [ 'a', 't', 'e', 'k' ]
+		} else if (!isEven(word)) {
+			
 		}
 	});
 	
@@ -36,6 +33,19 @@ const insideOut = str => {
 };
 
 tests();
+function inOutEven(word, half) {
+	let firstHalf = word.split("")
+		.splice(0, half)
+		.reverse();
+    /*
+    .split("") -> [ 't', 'a', 'k', 'e' ]
+    .spice(0, half) -> [ 't', 'a' ]
+    .reverse() -> [ 'a', 't' ]
+    */
+	let secondHalf = letters.reverse(); // ['e', 'k']
+	return firstHalf.concat(secondHalf);
+}
+
 function tests() {
 	insideOut("take me to semynak");
 	const word = "take";

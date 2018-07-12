@@ -1,6 +1,6 @@
-const insideOut = require("../src/InsideOutStrings/inside-out-strings");
+const insideOut = require("../src/_InsideOutStrings/inside-out-strings");
 
-describe.skip("Inside Out", () => {
+describe("Inside Out", () => {
 	describe("should turn each word of the given string 'inside out', moving the internal letters out and the extarnal to the centre", () => {
 		it("should return 'man i ende a atix up to budu', for the string 'man i need a taxi up to ubud'", () => {
 			const str = "man i need a taxi up to ubud",

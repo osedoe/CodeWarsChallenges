@@ -4,7 +4,7 @@
 
 ## Introduction
 
-My TV remote control has arrow buttons and an `OK` button. I can use these to move a "cursor" on a logical screen keyboard to type woords.
+My TV remote control has arrow buttons and an `OK` button. I can use these to move a "cursor" on a logical screen keyboard to type words.
 
 The screen "keyboard" layout looks like this:
 
@@ -18,7 +18,7 @@ u   v   w   x   y   z   _   /
 
 ## Task
 
-How many button presses on my remote are requireds to type a given `word`?
+How many button presses on my remote are required to type a given `word`?
 
 _Notes:_
 

@@ -3,8 +3,6 @@ function uniqueInOrder(iterable) {
     let arr = iterable;
     if (typeof iterable === 'string') {
         arr = iterable.split('');
-    // } else {
-    //     arr = iterable;
     }
     let result = [];
     for (let value of arr) {

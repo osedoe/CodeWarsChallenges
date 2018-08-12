@@ -23,7 +23,7 @@ const insideOut = str => {
 	// 6. Join the string and return it
 	
 	function isEven(word) {
-		(word.length%2 === 0) ? true : false;
+		return (word.length%2 === 0) ? true : false;
 	}
 	
 	

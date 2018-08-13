@@ -1,4 +1,4 @@
-const uniteUnique = require('../src/_SortedUnion/sorted-union');
+const uniteUnique = require('../src/SortedUnion/sorted-union');
 
 describe('Sorted Union', () => {
     describe('write a function that takes a few arrays and returns a new one with the unique values in order', () => {

@@ -1,5 +1,8 @@
-function uniteUnique(arr) {
-	return arr;
+function uniteUnique(...args) {
+	let clusterArray = [];
+	args.forEach(array => clusterArray = clusterArray.concat(array));
+	let finalArray = [];
+	return result = clusterArray.filter(number => (finalArray.indexOf(number) === -1) ? finalArray.push(number) : 0);
 }
-  
-uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+module.exports = uniteUnique;

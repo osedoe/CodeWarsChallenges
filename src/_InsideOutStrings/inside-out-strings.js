@@ -34,16 +34,20 @@ const insideOut = str => {
 
 tests();
 function inOutEven(word, half) {
-	let firstHalf = word.split("")
-		.splice(0, half)
-		.reverse();
-    /*
+	//let firstHalf = word.split("")
+	//	.splice(0, half)
+	//	.reverse();
+	
+	
+	
+	/*
     .split("") -> [ 't', 'a', 'k', 'e' ]
     .spice(0, half) -> [ 't', 'a' ]
     .reverse() -> [ 'a', 't' ]
     */
-	let secondHalf = letters.reverse(); // ['e', 'k']
-	return firstHalf.concat(secondHalf);
+
+	// let secondHalf = letters.reverse(); // ['e', 'k']
+	// return firstHalf.concat(secondHalf);
 }
 
 function tests() {
@@ -52,4 +56,6 @@ function tests() {
 	const result = word.split("").reverse();
 	console.log(result);
 }
+
+module.exports = insideOut;
 

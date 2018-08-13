@@ -1,4 +1,4 @@
-const seriesSum = require("../src/SumOfSeries/sum-of-series");
+const seriesSum = require("../src/_SumOfSeries/sum-of-series");
 
 describe.skip("Sum of Series", () => {
 	describe("should return the sum of a series up to nth-term", () => {

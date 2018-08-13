@@ -1,6 +1,6 @@
 const myReplace = require('../src/SearchAndReplace/search-and-replace');
 
-describe.skip('Search and Replace', () => {
+describe('Search and Replace', () => {
     describe('Perform a search and replace on a given sentence (first argument) and return a new sentence where a certain word (second argument) is replaced by other (third argument)', () => {
         it('"Let us go to the store", "store" and "mall" should return "Let us go to the mall"', () => {
             expect(myReplace('Let us go to the store', 'store', 'mall')).toEqual('Let us go to the mall');

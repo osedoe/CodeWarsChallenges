@@ -1,4 +1,4 @@
-const roundToNext5 = require("../src/RoundToMultipleOfFive/round-to-multiple-of-five");
+const roundToNext5 = require("../src/_RoundToMultipleOfFive/round-to-multiple-of-five");
 
 describe.skip("Round to Multiple of Five", () => {
     describe("Given a number 'n', it should return its multiple of five", () => {

@@ -1,4 +1,4 @@
-const tvRemote = require("../src/TV-Remote/tv-remote");
+const tvRemote = require("../src/_TV-Remote/tv-remote");
 
 describe.skip("TV Remote", () => {
 	describe("should return the number of button presses to write the given words based on the README table", () => {

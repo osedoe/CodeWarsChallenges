@@ -1,5 +1,5 @@
 function sumFibs(num) {
-    return num;
-  }
+	return num;
+}
   
-  sumFibs(4);
+sumFibs(4);

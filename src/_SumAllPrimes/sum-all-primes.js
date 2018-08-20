@@ -1,5 +1,5 @@
 function sumPrimes(num) {
-    return num;
-  }
+	return num;
+}
   
-  sumPrimes(10);
+sumPrimes(10);

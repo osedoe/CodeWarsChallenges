@@ -1,6 +1,8 @@
 function convertHTML(str) {
-    // &colon;&rpar;
-    return str;
-  }
+	// &colon;&rpar;
+	return str;
+}
   
-  convertHTML("Dolce & Gabbana");
+module.exports = convertHTML;
+
+convertHTML("Dolce & Gabbana");

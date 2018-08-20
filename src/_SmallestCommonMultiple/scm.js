@@ -1,6 +1,5 @@
 function smallestCommons(arr) {
-    return arr;
-  }
-  
-  
-  smallestCommons([1,5]);
+	return arr;
+}
+    
+smallestCommons([1,5]);

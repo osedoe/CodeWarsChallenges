@@ -1,5 +1,7 @@
 function dropElements(arr, func) {
-	// Drop them elements.
+
+	
+
 	return arr;
 }
   

@@ -5,9 +5,9 @@
 // sumFibs(75024) should return 60696.
 // sumFibs(75025) should return 135721.
 
-const sumFibs = require('../src/_SumAllOddFibonacciNumbers/sum-all-odd-fibonacci');
+const sumFibs = require('../src/SumAllOddFibonacciNumbers/sum-all-odd-fibonacci');
 
-describe.skip('Sum all odd fibonacci numbers', () => {
+describe('Sum all odd fibonacci numbers', () => {
     describe('it should return the sum of all odd Fibonacci numbers that are less than or equal to the passed number', () => {
         it('should return a type: number', () => {
             expect(typeof sumFibs(1)).toBe('number');

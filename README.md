@@ -10,9 +10,7 @@ Key points:
 
 ## Basic Test Setup
 
-<http://www.chaijs.com/>
-We are going to be using Mocha and Chao for the Tests.
-So, we'll have to require('chai');
+We are going to be using Jest to test the different katas.
 From there, we can choose to use assert, expect or should.
 As for now, I will be using mostly assert since it's the only one I'm familiar with.
 

@@ -1,12 +1,23 @@
-function roundToNext5(number){
+const roundToNext5 = (value) => {
+  
+    if (!typeof(value) == Number) {
+        console.log('Entrada no valida');
+    }
+    else if (value >= 0) {
+        if ( value%5 == 0) {
+            return value;
+        }
 
+        let k = value%5;
+        let num = value + 5 - k;
 
-
-}
+        return num;
+    } 
+    else {
+        let k = value%5;
+        let num = value - 5 + k; 
+        return num;
+    }
+};
 
 module.exports = roundToNext5;
-
-// const arr = [0, 2, 3, 12, 21, 30, -2, -2];
-// for (let i=0; i < arr.length; i++) {
-//     console.log(roundToNext5(arr[i]));
-// }

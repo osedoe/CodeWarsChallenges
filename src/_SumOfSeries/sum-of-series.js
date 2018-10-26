@@ -20,4 +20,4 @@ const seriesSum = (value) => {
     }   
   };
 
-module.exports = sumPrimes;s
+module.exports = seriesSum;

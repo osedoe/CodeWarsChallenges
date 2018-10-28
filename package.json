@@ -17,18 +17,17 @@
     "url": "https://github.com/OseDoe/CodeWarsChallenges/issues"
   },
   "homepage": "https://github.com/OseDoe/CodeWarsChallenges#readme",
-  "dependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.0.4"
-  },
+  "dependencies": {},
   "directories": {
     "test": "tests"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.0.1",
-    "jest": "^23.1.0",
-    "regenerator-runtime": "^0.11.1"
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1"
   }
 }

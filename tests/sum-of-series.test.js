@@ -1,6 +1,6 @@
 const seriesSum = require("../src/_SumOfSeries/sum-of-series");
 
-describe.skip("Sum of Series", () => {
+describe("Sum of Series", () => {
 	describe("should return the sum of a series up to nth-term", () => {
 		it("should return 1.00 for n = 1", () => {
 			expect(seriesSum(1)).toEqual(1.0);

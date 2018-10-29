@@ -8,7 +8,7 @@ const seriesSum = (value) => {
   } else {
     for (let i = 1; i <= value; i++) {
       let k = i + 3;
-      sum = sum + 1 / k;
+      sum = sum + 1/k;
     }
 
     let result = sum.toFixed(2);

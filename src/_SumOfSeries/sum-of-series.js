@@ -1,3 +1,4 @@
+
 const seriesSum = (value) => {
   let sum = 1;
 
@@ -6,13 +7,11 @@ const seriesSum = (value) => {
   } else if (value == 1) {
     return value.toFixed(2);
   } else {
-    for (let i = 1; i <= value; i++) {
-      let k = i + 3;
+    for (let i = 1; i < value; i++) {
+      let k = 1+3*i;
       sum = sum + 1/k;
     }
-
-    let result = sum.toFixed(2);
-    return result;
+    return sum.toFixed(2);
   }
 };
 

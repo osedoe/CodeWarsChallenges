@@ -3,7 +3,7 @@ const seriesSum = (value) => {
 
   if (!typeof (value) == Number || value <= 0 || !Number.isInteger(value)) {
     console.log('unvalid entry');
-  } else if (value == 1) {
+  } else if ( value == 1 ) {
     return parseInt(value.toFixed(2), 10);
   } else {
     for (let i = 1; i <= value; i++) {

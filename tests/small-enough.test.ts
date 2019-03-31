@@ -1,3 +1,14 @@
+import { smallEnough } from "../src/_SmallEnough/small-enough";
+
+
+describe('Small Enough', () => {
+    test('should return true if the elements in the array are lower than the given limit', () => {
+       const array = [66, 101];
+       const limit = 200;
+       expect(smallEnough(array, limit)).tobe
+    });
+});
+
 // Test.describe("Example tests",_=>{
 //     Test.assertEquals(smallEnough([66, 101], 200), true);
 //     Test.assertEquals(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100), false);

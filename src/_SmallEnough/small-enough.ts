@@ -1,3 +1,3 @@
-function smallEnough(a, limit){
+export function smallEnough(a, limit){
 
 }

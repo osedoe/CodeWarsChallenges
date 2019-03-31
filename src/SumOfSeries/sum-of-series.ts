@@ -1,7 +1,6 @@
-
-const seriesSum = (value) => {
+// FIXME: Check error
+export function seriesSum(value) {
   let sum = 1;
-
   if (!typeof (value) == Number || value <= 0 || !Number.isInteger(value)) {
     console.log('unvalid entry');
   } else if (value == 1) {
@@ -13,6 +12,4 @@ const seriesSum = (value) => {
     }
     return sum.toFixed(2);
   }
-};
-
-module.exports = seriesSum;
+}

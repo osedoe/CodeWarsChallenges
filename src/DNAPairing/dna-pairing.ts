@@ -1,4 +1,4 @@
-function pairElement(str) {
+export function pairElement(str: string) {
 	const dnaArray = str.split('');
 	const result = dnaArray.map( element => {
 		switch(element) {
@@ -14,9 +14,7 @@ function pairElement(str) {
 			case 'G':
 				return [element, 'C'];
 				break;
-		}	
+		}
 	});
 	return result;
 }
-
-module.exports = pairElement;

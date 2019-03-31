@@ -1,3 +1,3 @@
-const removeExclamationMarks = str => str.replace(/!/g,'');
-
-module.exports = removeExclamationMarks;
+export function removeExclamationMarks(str: string): string {
+ return str.replace(/!/g, '')
+}

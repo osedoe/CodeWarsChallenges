@@ -1,23 +1,21 @@
-const arithmetic = (a, b, operator) => {
+export function arithmetic(a, b, operator) {
     let answer;
     switch (operator) {
         case "add":
-            answer = a+b;
+            answer = a + b;
             break;
 
         case "subtract":
-            answer = a-b;
+            answer = a - b;
             break;
 
         case "multiply":
-            answer = a*b;
+            answer = a * b;
             break;
 
         case "divide":
-            answer = a/b;
+            answer = a / b;
             break;
     }
     return answer;
-};
-
-module.exports = arithmetic;
+}

@@ -1,4 +1,5 @@
-const scrollingText = text => {
+// FIXME: Check error
+export function scrollingText(text: string) {
     text.toUpperCase();
     let answer = [];
     let arr = text.split("");
@@ -12,6 +13,4 @@ const scrollingText = text => {
     });
     answer.pop();
     return answer;
-};
-
-module.exports = scrollingText;
+}

@@ -1,4 +1,4 @@
-function uniqueInOrder(iterable) {
+export function uniqueInOrder(iterable) {
     // Check that iterable is an array or a string and turn it into an array if string
     let arr = iterable;
     if (typeof iterable === 'string') {
@@ -10,5 +10,3 @@ function uniqueInOrder(iterable) {
     }
     return result;
 }
-
-module.exports = uniqueInOrder;

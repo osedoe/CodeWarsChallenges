@@ -1,4 +1,5 @@
-const squareSum = num => num.map(el => el*el)
-                            .reduce((acc, val) => acc + val);
-
-module.exports = squareSum;
+export function squareSum(num) {
+    return num
+        .map(el => el * el)
+        .reduce((acc, val) => acc + val);
+}

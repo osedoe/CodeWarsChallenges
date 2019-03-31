@@ -1,5 +1,5 @@
-const roundToNext5 = (value) => {
-  
+// FIXME: Check error
+export function roundToNext5(value) {
     if (!typeof(value) == Number) {
         console.log('Entrada no valida');
     }
@@ -7,17 +7,13 @@ const roundToNext5 = (value) => {
         if ( value%5 == 0) {
             return value;
         }
-
         let k = value%5;
         let num = value + 5 - k;
-
-        return num;
-    } 
-    else {
-        let k = value%5;
-        let num = value - 5 + k; 
         return num;
     }
-};
-
-module.exports = roundToNext5;
+    else {
+        let k = value%5;
+        let num = value - 5 + k;
+        return num;
+    }
+}

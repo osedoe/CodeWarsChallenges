@@ -1,3 +1,3 @@
-module.exports = function findEvenIndex(arr) {
-    //Code goes here!
+export function findEvenIndex(arr) {
+    // Code goes here!
 }

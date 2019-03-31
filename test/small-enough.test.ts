@@ -5,7 +5,7 @@ describe('Small Enough', () => {
     test('should return true if the elements in the array are lower than the given limit', () => {
        const array = [66, 101];
        const limit = 200;
-       expect(smallEnough(array, limit)).tobe
+       expect(smallEnough(array, limit)).toBeTruthy();
     });
 });
 

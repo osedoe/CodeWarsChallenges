@@ -1,4 +1,16 @@
-// Test.assertEquals( alphabetWar("z") , "Right side wins!" );
-// Test.assertEquals( alphabetWar("zdqmwpbs") , "Let's fight again!" );
-// Test.assertEquals( alphabetWar("zzzzs"), "Right side wins!" );
-// Test.assertEquals( alphabetWar("wwwwww"), "Left side wins!" );
+import { alphabetWar } from "../src/_AlphabetWar/alphabet-wars";
+
+describe.skip('Alphabet Wars', () => {
+  test('should win right side', () => {
+    expect(alphabetWar('z')).toBe("Right side wins!");
+  });
+  test('should be a draw', () => {
+    expect(alphabetWar('zdqmwpbs')).toBe('Let\'s fight again!');
+  });
+  test('should win the right side', () => {
+    expect(alphabetWar('zzzzs')).toBe('Right side wins!');
+  });
+  test('should win the left side', () => {
+    expect(alphabetWar('wwwwww')).toBe('Left side wins!');
+  });
+});

@@ -29,7 +29,8 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/config/jest/preprocessor.js"
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/jest/preprocessor.js",
+      "^.+\\.(ts|tsx)?$": "ts-jest"
     },
     "testPathIgnorePatterns": [
       "/node_modules/"

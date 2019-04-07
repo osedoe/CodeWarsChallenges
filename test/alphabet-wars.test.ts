@@ -1,4 +1,4 @@
-import { alphabetWar } from "../src/_AlphabetWar/alphabet-wars";
+import { alphabetWar } from "../src/AlphabetWar/alphabet-wars";
 
 describe('Alphabet Wars', () => {
   test('should win right side', () => {

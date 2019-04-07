@@ -1,6 +1,6 @@
 import { alphabetWar } from "../src/_AlphabetWar/alphabet-wars";
 
-describe.skip('Alphabet Wars', () => {
+describe('Alphabet Wars', () => {
   test('should win right side', () => {
     expect(alphabetWar('z')).toBe("Right side wins!");
   });

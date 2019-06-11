@@ -127,4 +127,6 @@ typings/
 !.vscode/extensions.json
 
 
+.idea
+
 # End of https://www.gitignore.io/api/git,node,macos,visualstudiocode

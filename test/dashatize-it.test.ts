@@ -1,6 +1,6 @@
 import { dashatize } from "../src/_DashatizeIt/dashatize-it";
 
-describe.skip('Dashatize it', () => {
+describe('Dashatize it', () => {
     describe('Should return a string with dash marks before and after each odd integer, omiting the beginning and end of the string', () => {
         it('should return 2-7-4', () => {
             expect(dashatize(274)).toBe('2-7-4');

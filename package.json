@@ -41,7 +41,7 @@
     "testPathIgnorePatterns": [
       "/node_modules/"
     ],
-    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleNameMapper": {
       "\\.(css|jpg|png|svg)$": "<rootDir>/node_modules/jest-css-modules"
     },

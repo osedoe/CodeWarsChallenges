@@ -1,3 +1,3 @@
-export function sum() {
-    return 1;
-}
+export function formatAString(names){
+    //your code here
+  }

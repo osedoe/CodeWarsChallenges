@@ -8,7 +8,7 @@ A few things to take into consideration:
 
 - We need to create the `__init__.py` file at the package level otherwise it won't let us do relative imports
 
-- Test files are written as `test_<dummy>>.py`.
+- Test files are written as `test_<dummy>.py`.
 
 - Assertions are reached through the syntax:
 

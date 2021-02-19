@@ -2,13 +2,13 @@
 
 Key points:
 
-- All challenges are solved using JavaScript (ES6).
+- All challenges are solved using either Typescript or Python.
 - The readme.md inside each directory should display the problem.
-- The file will have the challenge's name *.js.
-- A second file named *2.js can be included with alternative solutions.
-- Each challenge will have a module.export so it can be tested in the tests/test.js
+- Challenges beginning with an underscore are not solved yet, but may contain written tests or pseudo-code.
 
 ## Basic Test Setup
+
+### TS
 
 We are going to be using Jest to test the different katas.
 From there, we can choose to use assert, expect or should.
@@ -23,6 +23,10 @@ describe('Title', function() {
     });
 });
 ```
+
+### Python
+
+[TODO]
 
 ## Assert
 
